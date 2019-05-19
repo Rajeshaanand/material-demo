@@ -1,4 +1,4 @@
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+<html><head><meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> </head>
 <app-child [selectedValue]="defaultvalue"  (customevent)="ondropdownchange($event)"></app-child>
 <div *ngIf="dataSource.length" class="mat-elevation-z8">
 <mat-table [dataSource]="dataSource" >    
@@ -42,3 +42,4 @@
       <mat-list-item *ngFor="let post of posts">{{post.id}}. {{post.title}} </mat-list-item>    
      </mat-list>
 </mat-card> 
+</html>
