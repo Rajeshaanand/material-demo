@@ -48,7 +48,7 @@ export class ParentComponent implements OnInit {
     }
 
 constructor(http:Http){
-  http.get("http://jsonplaceholder.typicode.com/posts").subscribe(Response=>{
+  http.get("https://jsonplaceholder.typicode.com/posts").subscribe(Response=>{
     this.posts=Response.json();
   })
   ;
