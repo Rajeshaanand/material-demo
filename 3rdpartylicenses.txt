@@ -60,6 +60,9 @@ MIT
 @angular/forms
 MIT
 
+@angular/http
+MIT
+
 @angular/material
 MIT
 The MIT License
@@ -89,6 +92,8 @@ THE SOFTWARE.
 
 @angular/material/button
 
+@angular/material/card
+
 @angular/material/core
 
 @angular/material/datepicker
@@ -98,6 +103,8 @@ THE SOFTWARE.
 @angular/material/form-field
 
 @angular/material/grid-list
+
+@angular/material/list
 
 @angular/material/paginator
 
