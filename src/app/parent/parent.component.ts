@@ -8,6 +8,7 @@ import {MatPaginator, MatTableDataSource} from '@angular/material';
 })
 
 export class ParentComponent implements OnInit {
+  defaultvalue ="All";
   displayedColumns: string[] = ['code','name','gender','salary','dateofbirth'];
  // dataSource= new MatTableDataSource<Iemployee>(employees);
  dataSource = employees;

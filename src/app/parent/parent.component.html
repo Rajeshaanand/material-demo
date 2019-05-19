@@ -1,4 +1,4 @@
-<app-child [selectedValue]="defaultvalue" [txt]="txt" (customevent)="ondropdownchange($event)"></app-child>
+<app-child [selectedValue]="defaultvalue"  (customevent)="ondropdownchange($event)"></app-child>
 <div *ngIf="dataSource.length" class="mat-elevation-z8">
 <mat-table [dataSource]="dataSource" >    
     <ng-container matColumnDef="code">

@@ -22,7 +22,7 @@ export class ChildComponent implements OnInit {
 
   onChange(){
      // this.selectedValue=this.selectedValue;
-      this.customevent.emit({gender:this.selectedValue,txt:this.txt})
+      this.customevent.emit({gender:this.selectedValue})
       console.log('Dropdo'+ this.selectedValue);
   }
 
