@@ -1,30 +1,6 @@
 import { Component,OnInit,ViewChild } from '@angular/core';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
-
-@Component({
-  selector: 'app-parent',
-  templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
-})
-
-export class ParentComponent implements OnInit {
-  defaultvalue ="All";
-  displayedColumns: string[] = ['code','name','gender','salary','dateofbirth'];
- // dataSource= new MatTableDataSource<Iemployee>(employees);
- dataSource = employees;
-  
-
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  
-  
-  ngOnInit() {   
-  //this.dataSource.paginator = this.paginator;
-  }
-  ondropdownchange(eventArgs:any){        
-    //  Selecteddropdownvalue= Defaultvalue;      
-    }
-
-}
+import { Http } from '@angular/http';
 export interface Iemployees {
   code: number;
   name: string;
@@ -47,3 +23,37 @@ const employees: Iemployees[] = [
   {code:11,name:'Tara',gender:'Female',salary:'30000',dateofbirth:'10-10-2000'},
   {code:12,name:'Kim',gender:'Female',salary:'30000',dateofbirth:'10-10-2000'}
     ];
+@Component({
+  selector: 'app-parent',
+  templateUrl: './parent.component.html',
+  styleUrls: ['./parent.component.css']
+})
+
+export class ParentComponent implements OnInit {
+  defaultvalue ="All";
+  posts:any[];
+  displayedColumns: string[] = ['code','name','gender','salary','dateofbirth'];
+ // dataSource= new MatTableDataSource<Iemployee>(employees);
+ dataSource = employees;
+  
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  
+  
+  ngOnInit() {   
+  //this.dataSource.paginator = this.paginator;
+  }
+  ondropdownchange(eventArgs:any){        
+    //  Selecteddropdownvalue= Defaultvalue;      
+    }
+
+constructor(http:Http){
+  http.get("http://jsonplaceholder.typicode.com/posts").subscribe(Response=>{
+    this.posts=Response.json();
+  })
+  ;
+
+}
+
+}
+
