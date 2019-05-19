@@ -2,7 +2,7 @@
     <mat-grid-tile>
         <mat-form-field>  
             <mat-label>Choose</mat-label>
-          <mat-select [(ngModel)]="mat-selectedValue" (selectionChange)="onChange($event)">    
+          <mat-select [(ngModel)]="selectedValue" (selectionChange)="onChange($event)">    
             <mat-option *ngFor="let ddvalue of ddvalues" [value]="ddvalue.name">
             {{ddvalue.name}}
             </mat-option>
